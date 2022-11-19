@@ -6,7 +6,7 @@ Nós somos o grupo 3, cujo os integrantes são os alunos: Breno Figueiredo, Bren
 ## A linguagem escolhida pelo grupo:
 Nós decidimos utilizar a linguagem Python, escolhemos essa linguagem por questões de afinidade e facilidade na visualização.
 ## Base de dados:
-Essa é nossa base de dados, nós retiramos ela do Kaggle, nesse link, temos diversos dados do Datatran a respeito dos acidentes em rodovias brasileiras. Nós também disponibilizamos o arquivo .csv e .xlxs
+Essa é nossa base de dados, nós retiramos ela do Kaggle, nesse link, temos diversos dados do Datatran a respeito dos acidentes em rodovias brasileiras. Nós também disponibilizamos o arquivo .csv e .xlsx
 ### Link da Base de Dados
 https://www.kaggle.com/datasets/mcamera/brazil-highway-traffic-accidents?resource=download
 ## Estrutura + Bibliotecas que o grupo utiliza no projeto:
