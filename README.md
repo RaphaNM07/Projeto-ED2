@@ -10,3 +10,5 @@ Nós decidimos utilizar a linguagem Python, escolhemos essa linguagem por quest�
 Iremos trabalhar com a estrutura de dados de Grafo, nós utilizaremos a nossa base de dados e a partir das relações entre elas iremos construir um grafo
 ### Bibliotecas:
 O grupo vai utilizar o StellarGraph, que é uma biblioteca em Python que oferece algoritmos de última geração para Machine Learning usando grafos, e utilizando esses algoritmos é fácil de descobrir padrões e responder perguntas sobre essa estrutura de dados.
+#### Link do GitHub de onde aprendemos sobre a biblioteca:
+https://github.com/stellargraph/stellargraph
