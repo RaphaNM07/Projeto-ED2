@@ -1,3 +1,4 @@
+![](https://www.grapheverywhere.com/wp-content/uploads/2019/07/pic004.jpg)
 # Projeto de ED2
 ## Repositório para o Projeto de ED2:
 Esse repositório irá conter todo o projeto da disciplina de Estrutura de Dados 2, do professor Fernando Medeiros.
