@@ -1,6 +1,8 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import pandas as pd
+from networkx.algorithms import coloring
+from networkx.algorithms import community
 
 # Removendo todas as linhas que possuem "NA" como BR
 with open('E:/Datasets ED2/dados_datatran2020.csv', 'r') as input_file, open('output.csv', 'w') as output_file:
@@ -58,6 +60,19 @@ for i in range(len(bd.index)):
     linha = bd.iloc[i]
     G.add_edge(linha['br'], linha['municipio'], data=linha['data_inversa'], acidente=linha['tipo_acidente'])
     
+#print(coloring.strategy_largest_first(G, None))
+"""
+A função strategy_largest_first acima retorna uma lista dos graus dos nós do grafo G em ordem descresente.
+Nos permite verificar quais nós possuem mais arestas, ou seja, um maior número de acidentes.
+"""
+
+#print(community.kernighan_lin_bisection(G))
+"""
+A funçaõ kernighan_lin_biscetion acima retorna uma tupla contendo duas partições de um grafo G. Essas partiçoes
+são feitas de modo que haja o mínimo de arestas possíveis cruzando de uma partição a outra.
+"""
+
+
 
 # Plotando o grafo
 nx.draw(G, with_labels=True, node_color=cores_tipo)
