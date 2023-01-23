@@ -19,25 +19,46 @@ municipios = list(dict.fromkeys(municipios))
 brs = bd['br'].tolist()
 brs = list(dict.fromkeys(brs))
 
-# Criando uma lista com todos os nós
+# Criando uma lista com todos os vértices
 nodes = brs + municipios
 
-# 208 municípios
+# 184 municípios
 print(municipios)
 
-# 23 BR's
+# 15 BR's
 print(brs)
 
 # Criando o grafo
 G = nx.MultiGraph()
 
-# Adicionando os nós no grafo com seus respectivos nomes
+# Adicionando os municípios no grafo com seus respectivos nomes
 for i in range (len(municipios)):
-    G.add_node(municipios[i], tipo='municipio')
+    G.add_node(municipios[i], tipo='municipio', node_color='blue')
     
 # Adicionando as BR's no grafo com seus respectivos nomes
 for i in range(len(brs)):
-    G.add_node(brs[i], tipo='br')
+    G.add_node(brs[i], tipo='br', node_color='red')
     
+# 199 Nós
+print(G.number_of_nodes())
+
+# Definindo as cores dos vértices
+cores_map = nx.get_node_attributes(G, "tipo")
+
+for chave in cores_map:
+    if cores_map[chave] == 'municipio':
+        cores_map[chave] = 'red'
+    else:
+        cores_map[chave] = 'blue'
+        
+cores_tipo = [cores_map.get(node) for node in G.nodes()]
+
+# Adicionando as arestas do grafo
+for i in range(len(bd.index)):
+    linha = bd.iloc[i]
+    G.add_edge(linha['br'], linha['municipio'], data=linha['data_inversa'], acidente=linha['tipo_acidente'])
     
-# nx.draw(G)
+
+# Plotando o grafo
+nx.draw(G, with_labels=True, node_color=cores_tipo)
+plt.show()
