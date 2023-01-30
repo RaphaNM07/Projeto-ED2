@@ -19,8 +19,11 @@ O grupo vai utilizar o StellarGraph, que é uma biblioteca em Python que oferece
 https://github.com/stellargraph/stellargraph
 ## Foto do grafo plotado
 Sem rótulo:
+
 ![image](https://user-images.githubusercontent.com/79621478/215623714-11b4a5b7-7d2e-43db-953a-8bd63843a514.png)
+
 Com rótulo:
+
 ![image](https://user-images.githubusercontent.com/79621478/215623839-39c311d0-4bbf-4472-943c-ff9af0233a73.png)
 
 
