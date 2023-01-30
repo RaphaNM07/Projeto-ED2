@@ -17,3 +17,6 @@ Iremos trabalhar com a estrutura de dados de Grafo, nós utilizaremos a nossa ba
 O grupo vai utilizar o StellarGraph, que é uma biblioteca em Python que oferece algoritmos de última geração para Machine Learning usando grafos, e utilizando esses algoritmos é fácil de descobrir padrões e responder perguntas sobre essa estrutura de dados.
 #### Link do GitHub de onde aprendemos sobre a biblioteca:
 https://github.com/stellargraph/stellargraph
+## Foto do grafo plotado
+![image](https://user-images.githubusercontent.com/79621478/215623714-11b4a5b7-7d2e-43db-953a-8bd63843a514.png)
+
