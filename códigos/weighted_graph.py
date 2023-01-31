@@ -1,9 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import pandas as pd
-from networkx.algorithms import community
 from networkx.algorithms import approximation
-from networkx.algorithms import centrality
 from networkx.algorithms import shortest_paths
 
 # Removendo todas as linhas que possuem "NA" como BR
@@ -25,10 +23,10 @@ brs = list(dict.fromkeys(brs))
 
 
 # 184 municípios
-#print(municipios)
+print(municipios)
 
 # 15 BR's
-#print(brs)
+print(brs)
 
 # Criando o grafo
 G = nx.Graph()
@@ -42,7 +40,7 @@ for i in range(len(brs)):
     G.add_node(brs[i], tipo='br')
     
 # 199 Nós
-#print(G.number_of_nodes())
+print(G.number_of_nodes())
 
 # Definindo as cores dos vértices
 cores_map = nx.get_node_attributes(G, "tipo")
@@ -63,29 +61,24 @@ for i in range(len(bd.index)):
     else:
         G[linha_arq['br']][linha_arq['municipio']]['weight'] += 1
 
-nodes = G.nodes()
 
 """
-Caso queira fazer com que o algoritmo de conjunto dominante (approximation.min_edge_dominating_set(G)) funcione, precisamos transformar o nosso multigrafo em um 
-grafo não-direcionado, fazendo com que dois nós sejam ligados por apenas uma aresta e com um peso nessa aresta,
-que seria a quantidade de acidentes entre uma BR e um município.
-
-
-density() e deegres() também seriam interessantes ao usar um grafo não direcionado e com peso.
+Confirmar depois se conjunto dominante realmente tem sentido
 """
+#print(approximation.min_edge_dominating_set(G))
 
-print(approximation.min_edge_dominating_set(G))
-
-print(centrality.closeness_centrality(G))
-
-print(community.louvain_communities(G))
 
 # É possível verificar a quantidade de acidentes em um nó utilizando o comando abaixo
-print(G['JUATUBA'])
+print(G["UBERLANDIA"])
+# Resultado: {50: {'weight': 199}, 365: {'weight': 195}},
+# ou seja, 50 acidentes na altura de UBERLANDIA da BR 50, e 195 na altura de UBERLANDIA da BR 365.
+
 
 # Verifica o menor caminho entre dois nós, mostrando o caminho com menos acidentes entre eles
 print(shortest_paths.dijkstra_path(G, source='PLANURA', target='CAPIM BRANCO'))
+# Resultado: ['PLANURA', 364, 'FRUTAL', 365, 'SAO GONCALO DO ABAETE', 40, 'CAPIM BRANCO']
 
 # Plotando o grafo
-nx.draw(G, with_labels=True, node_color=cores_tipo)
+plt.figure(3,figsize=(8,8), dpi=250)
+nx.draw(G, with_labels=True, node_color=cores_tipo, node_size=120, font_size=8)
 plt.show()
