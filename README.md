@@ -20,10 +20,10 @@ https://github.com/stellargraph/stellargraph
 ## Foto do grafo plotado
 Sem rótulo:
 
-![image](https://user-images.githubusercontent.com/79621478/215623714-11b4a5b7-7d2e-43db-953a-8bd63843a514.png)
+![image](https://user-images.githubusercontent.com/79621478/215625453-b575b6ea-da0d-4197-bc1a-d2b1e836b731.png)
 
 Com rótulo:
 
-![image](https://user-images.githubusercontent.com/79621478/215623839-39c311d0-4bbf-4472-943c-ff9af0233a73.png)
+![image](https://user-images.githubusercontent.com/79621478/215625487-c739a3d1-f7e0-42bc-81a1-07c43ec6d05a.png)
 
 
